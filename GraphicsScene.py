@@ -219,7 +219,7 @@ class GraphicsScene(QWidget):
             if self.hoverElements(e.pos()):
                 update = True
         elif self.grabbed_element.isMovable:  # move the movable grabbed element with the mouse.
-            self.grabbed_element.boundingBox.moveTopLeft(e.pos() + self.grab_offset)
+            self.grabbed_element.setPosition(e.pos() + self.grab_offset)
             self.moved = True
             update = True
 
